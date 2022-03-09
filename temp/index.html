@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Username</th>
+      <th scope="col">Ism</th>
+      <th scope="col">Murojat</th>
+      <th scope="col">Xabar yuborish</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in max %}
+    <tr>
+      <th scope="row">{{i.id}}</th>
+      <td>{{i.username}}</td>
+      <td>{{i.ism}}</td>
+      <td>{{i.matn}}</td>
+      <td>{{i.tg_id}}</td>
+      <td><a href="{% url 'habar' i.id %}">Yuborish</a></td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+</body>
+</html>
